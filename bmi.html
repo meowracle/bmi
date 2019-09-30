@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bmi</title>
+</head>
+<body>
+<h2>Moi nhap vao thong tin</h2>
+<h3>Chieu cao: <input id="height"> m</h3>
+<h3>Can nang: <input id="weight"> kg</h3>
+<h3><input type="button" value="Click de xem BMI" onclick="index()"></h3>
+<script>
+    function index(){
+    let h = parseFloat(document.getElementById("height").value);
+    let w = parseFloat(document.getElementById("weight").value);
+    let bmi = w/(h*h);
+        if (bmi < 18){
+            alert("Underweight");
+
+        }
+        else if (bmi < 25.0) {
+            alert("Normal");
+
+        }
+        else if (bmi < 30.0) {
+            alert("Overweight");
+        }
+        else
+                    alert("Obese");
+    }
+
+
+</script>
+</body>
+</html>
